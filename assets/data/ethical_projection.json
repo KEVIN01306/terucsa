@@ -1,0 +1,291 @@
+{
+  "header": {
+    "kicker": "Proyección Ética",
+    "title": "Aristóteles, Kant\ny el Mundo Real",
+    "subtitle": "Tres estaciones interactivas para descubrir qué tipo de profesional estás siendo."
+  },
+  "home": {
+    "title": "Elige una estación",
+    "description": "Cada estación dura entre 2 y 4 minutos. Puedes hacer una, dos o las tres.",
+    "stations": [
+      {
+        "id": "s1",
+        "num": "FASE 01",
+        "title": "El Termómetro del Carácter",
+        "desc": "Aristóteles · virtud y término medio",
+        "route": "/station1"
+      },
+      {
+        "id": "s2",
+        "num": "FASE 02",
+        "title": "El Escáner Kantiano",
+        "desc": "Kant · medio vs. fin en sí mismo",
+        "route": "/station2"
+      },
+      {
+        "id": "s3",
+        "num": "FASE 03",
+        "title": "La Ruleta del Conflicto",
+        "desc": "Ética aplicada · dilemas y costo personal",
+        "route": "/station3"
+      }
+    ]
+  },
+  "station1": {
+    "kicker": "Estación 1 · Aristóteles",
+    "title": "El Termómetro del Carácter",
+    "description": "Una brújula rápida para descubrir qué virtud profesional necesitas cultivar.",
+    "keyIdea": "Para Aristóteles, las normas no bastan; hay que formar el carácter con hábitos.",
+    "careerPrompt": "Tu carrera (opcional)",
+    "careerPlaceholder": "Ej.: Medicina, Derecho, Ingeniería...",
+    "question": "Frente a una injusticia en tu profesión, ¿qué haces?",
+    "options": [
+      {
+        "id": "deficit",
+        "tag": "Defecto",
+        "title": "Callo para no tener problemas",
+        "subtitle": "Prefiero no intervenir, aunque algo no sea justo.",
+        "emoji": "🦁",
+        "virtue": "Fortaleza",
+        "resultTitle": "Callar también puede ser un defecto",
+        "feedback": "Frente a una injusticia, el silencio parece prudencia, pero puede ser deficiencia: falta de valentía para defender lo justo. Aristóteles diría que la virtud está en el término medio: ni callar por miedo, ni explotar sin razón.",
+        "closing": "La fortaleza es el hábito de actuar con valentía cuando la situación lo exige. No se nace con ella: se forma con decisiones pequeñas y repetidas."
+      },
+      {
+        "id": "excess",
+        "tag": "Exceso",
+        "title": "Exploto y respondo agresivamente",
+        "subtitle": "Reacciono con enojo, sin medir consecuencias.",
+        "emoji": "🧭",
+        "virtue": "Prudencia",
+        "resultTitle": "Explotar no es lo mismo que actuar con justicia",
+        "feedback": "Responder con agresión puede parecer fuerza, pero es exceso: la emoción toma el lugar de la deliberación. El término medio aristotélico pide prudencia para elegir cómo, cuándo y con qué intensidad actuar.",
+        "closing": "La prudencia es la virtud práctica de deliberar bien antes de actuar. En la profesión, permite defender lo justo sin destruir a las personas ni el vínculo."
+      },
+      {
+        "id": "mean",
+        "tag": "Término medio",
+        "title": "Actúo con prudencia y valentía",
+        "subtitle": "Delibero, defiendo lo justo y cuido el modo de hacerlo.",
+        "emoji": "⚖️",
+        "virtue": "Justicia",
+        "resultTitle": "Actuar con prudencia y valentía es el término medio",
+        "feedback": "Elegiste el término medio: ni silencio cómplice ni agresión. Aristóteles llama virtud al hábito de elegir el justo medio según la situación. Aun así, siempre hay una virtud que seguir cultivando: la justicia, para dar a cada uno lo que le corresponde.",
+        "closing": "La justicia es el hábito de reconocer y sostener lo que es debido a cada persona. Se forma con decisiones coherentes, incluso cuando cuestan."
+      }
+    ]
+  },
+  "station2": {
+    "kicker": "Estación 2 · Kant",
+    "title": "El Escáner Kantiano",
+    "description": "Elige tu área y recibe un escenario. Después decide si trata a la persona como medio o como fin en sí misma.",
+    "keyIdea": "Las personas tienen dignidad, no precio. No pueden usarse solo como instrumentos.",
+    "areaPrompt": "Elige tu área",
+    "areaSubtitle": "Si tu carrera no aparece, elige “General”.",
+    "namePrompt": "Tu nombre (opcional, para el compromiso)",
+    "namePlaceholder": "Ej.: Ana · Medicina",
+    "question": "¿Esta acción trata a la persona como…?",
+    "choices": [
+      {
+        "id": "medio",
+        "label": "Medio (instrumento)",
+        "desc": "Se usa a la persona para lograr algo."
+      },
+      {
+        "id": "fin",
+        "label": "Fin en sí mismo (dignidad)",
+        "desc": "Se reconoce su valor propio y su autonomía."
+      }
+    ],
+    "areas": [
+      {
+        "id": "ingenieria",
+        "label": "Ingeniería / Tecnología",
+        "scenarios": [
+          {
+            "text": "Usar datos privados de usuarios para mejorar un algoritmo sin su permiso.",
+            "answer": "medio",
+            "explain": "La persona se usa como fuente de datos sin consentimiento: se instrumentaliza su información para un fin técnico."
+          },
+          {
+            "text": "Pedir consentimiento informado antes de usar datos de usuarios en un nuevo algoritmo.",
+            "answer": "fin",
+            "explain": "Se reconoce a la persona como fin en sí misma: se respeta su autonomía y su decisión."
+          }
+        ]
+      },
+      {
+        "id": "medicina",
+        "label": "Medicina / Salud",
+        "scenarios": [
+          {
+            "text": "Tratar a un paciente solo como un número para cumplir la meta del mes.",
+            "answer": "medio",
+            "explain": "El paciente deja de ser persona y se convierte en un indicador de productividad."
+          },
+          {
+            "text": "Escuchar al paciente y explicarle su diagnóstico antes de decidir el tratamiento juntos.",
+            "answer": "fin",
+            "explain": "Se reconoce su dignidad y su autonomía: participa en la decisión sobre su propia vida."
+          }
+        ]
+      },
+      {
+        "id": "derecho",
+        "label": "Derecho",
+        "scenarios": [
+          {
+            "text": "Tratar a un cliente solo como un caso para ganar el expediente.",
+            "answer": "medio",
+            "explain": "Se usa al cliente como medio para el prestigio o el éxito profesional."
+          },
+          {
+            "text": "Informar al cliente con transparencia aunque eso implique perder el caso.",
+            "answer": "fin",
+            "explain": "Se respeta su derecho a saber y a decidir; se le trata como fin, no como instrumento del abogado."
+          }
+        ]
+      },
+      {
+        "id": "admin",
+        "label": "Administración / Finanzas",
+        "scenarios": [
+          {
+            "text": "Maquillar un informe para cumplir metas y no perder el bono.",
+            "answer": "medio",
+            "explain": "Se usa la confianza de otros como instrumento para un beneficio propio."
+          },
+          {
+            "text": "Reportar el resultado real aunque eso afecte el bono del equipo.",
+            "answer": "fin",
+            "explain": "Se trata a las personas como fines: merecen información veraz para decidir."
+          }
+        ]
+      },
+      {
+        "id": "educacion",
+        "label": "Educación",
+        "scenarios": [
+          {
+            "text": "Aprobar a un estudiante para no tener problemas administrativos.",
+            "answer": "medio",
+            "explain": "El estudiante se usa como medio para evitar conflictos, no como fin de formación."
+          },
+          {
+            "text": "Acompañar al estudiante que está en riesgo aunque requiera más tiempo.",
+            "answer": "fin",
+            "explain": "Se reconoce al estudiante como fin en sí mismo: su formación importa más que la comodidad del docente."
+          }
+        ]
+      },
+      {
+        "id": "comunicacion",
+        "label": "Comunicación",
+        "scenarios": [
+          {
+            "text": "Publicar una noticia sin verificar para ganar clics.",
+            "answer": "medio",
+            "explain": "La audiencia se usa como medio para generar tráfico; se instrumentaliza su confianza."
+          },
+          {
+            "text": "Verificar la fuente antes de publicar aunque se pierda la primicia.",
+            "answer": "fin",
+            "explain": "Se respeta a la audiencia como fin: merece información veraz para formarse un juicio."
+          }
+        ]
+      },
+      {
+        "id": "psicologia",
+        "label": "Psicología",
+        "scenarios": [
+          {
+            "text": "Dar un diagnóstico rápido sin escuchar al paciente para atender más casos.",
+            "answer": "medio",
+            "explain": "La persona se reduce a un expediente; no se reconoce su dignidad ni su historia."
+          },
+          {
+            "text": "Dedicar tiempo a escuchar la historia completa antes de diagnosticar.",
+            "answer": "fin",
+            "explain": "Se trata al paciente como fin: su experiencia y su voz importan en el proceso."
+          }
+        ]
+      },
+      {
+        "id": "arquitectura",
+        "label": "Arquitectura",
+        "scenarios": [
+          {
+            "text": "Diseñar sin consultar a la comunidad afectada para ahorrar tiempo.",
+            "answer": "medio",
+            "explain": "La comunidad se usa como obstáculo o medio, no como fin de la obra."
+          },
+          {
+            "text": "Incluir a la comunidad en las decisiones del proyecto que la afecta.",
+            "answer": "fin",
+            "explain": "Se reconoce a las personas como fines: su voz y su territorio tienen valor propio."
+          }
+        ]
+      },
+      {
+        "id": "general",
+        "label": "General",
+        "scenarios": [
+          {
+            "text": "Usar la confianza de un compañero para obtener un beneficio personal.",
+            "answer": "medio",
+            "explain": "Se instrumentaliza la confianza de otra persona para un fin propio."
+          },
+          {
+            "text": "Reconocer el trabajo de un compañero aunque no te beneficie directamente.",
+            "answer": "fin",
+            "explain": "Se reconoce a la persona como fin: su esfuerzo tiene valor en sí mismo."
+          }
+        ]
+      }
+    ],
+    "closing": "Kant no pregunta si la acción es útil, sino si respeta la dignidad de las personas. El imperativo categórico nos pide actuar como si nuestra decisión pudiera convertirse en ley universal.",
+    "certificate": {
+      "title": "Compromiso Categórico",
+      "text": "“Me comprometo a tratar a las personas siempre como fines en sí mismas y nunca solo como medios; a obrar como si mi acción pudiera convertirse en ley universal.”",
+      "footer": "Comparte una captura de este compromiso."
+    }
+  },
+  "station3": {
+    "kicker": "Estación 3 · Ética aplicada",
+    "title": "La Ruleta del Conflicto",
+    "description": "La ruleta elegirá al azar un dilema ético. Tendrás 30 segundos para responder:",
+    "questionsHeading": "Responde en voz alta:",
+    "reflectiveQuestions": [
+      "¿Esta decisión es conveniente o moralmente correcta?",
+      "¿Qué costo personal asumirías por defender tu ética?"
+    ],
+    "dilemmas": [
+      "Tu jefe te ordena maquillar un informe financiero/técnico para no perder un contrato millonario.",
+      "Un paciente/cliente te ofrece una gran suma de dinero para que ocultes un error grave que cometiste.",
+      "Te ofrecen un ascenso importante si apruebas una auditoría que sabes que está incompleta o es fraudulenta.",
+      "El director de tu institución te pide cambiar la nota de un estudiante porque su padre es un gran donante.",
+      "Tienes la oportunidad de publicar una noticia falsa que te dará millones de clics y fama, pero dañará a una persona inocente.",
+      "Descubres que un colega está cometiendo una falta ética, pero si lo reportas, el equipo entero (incluyéndote) pierde un bono.",
+      "Un familiar de tu paciente te pide con insistencia que le reveles detalles privados de la terapia o el diagnóstico."
+    ],
+    "resultHeading": "¿Cómo afrontar estos conflictos?",
+    "resultSubtitle": "Sigue este procedimiento de 3 pasos en la vida real:",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Pausa y evalúa",
+        "description": "No reacciones en caliente. Identifica qué está en juego (tu puesto, dinero, amistades) y qué principios éticos están siendo afectados."
+      },
+      {
+        "number": 2,
+        "title": "Revisa la dignidad",
+        "description": "Usa el escáner de Kant: ¿esta acción trata a alguien como medio o como fin? Usa la virtud de Aristóteles: ¿estás cayendo en el exceso o el defecto?"
+      },
+      {
+        "number": 3,
+        "title": "Decide y asume el costo",
+        "description": "Actúa de forma correcta, no solo conveniente. Acepta el costo personal (críticas, pérdida de privilegios) como parte de tu integridad profesional."
+      }
+    ]
+  }
+}
